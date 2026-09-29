@@ -1,0 +1,227 @@
+<!-- wp:paragraph -->
+<p>This WordPress security checklist covers the steps I apply to client websites. WordPress core is well maintained, and most hacked sites are not hacked through WordPress itself, but through outdated plugins, weak passwords, and missing backups. Every step here is practical, and most take minutes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Updates and Software</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">1. Keep Everything Updated</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Update WordPress core, themes, and plugins regularly, after a backup. Many updates close known security holes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">2. Remove What You Do Not Use</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Delete inactive plugins and themes. Even deactivated code can be a risk if it has a vulnerability.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">3. Use Trusted Sources Only</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Install plugins and themes only from WordPress.org, the official developer, or reputable marketplaces. Nulled premium plugins often contain malware.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Login and Users</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">4. Strong Passwords and Unique Accounts</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Every user gets their own account with a strong, unique password. No shared "admin" logins.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">5. Two-Factor Authentication</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Enable two-factor login for all administrators and shop managers.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">6. Limit Login Attempts</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Block repeated failed logins to stop brute-force attacks.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">7. Correct User Roles</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Give each person the lowest role they need. An editor does not need administrator access.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Firewall and Monitoring</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">8. Use a Web Application Firewall</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A firewall blocks malicious traffic before it reaches your site. Options include a security plugin like Wordfence or protection at the CDN or server level, such as Cloudflare. The right choice depends on your hosting and traffic.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">9. Scan for Malware</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Scheduled malware scans catch injected code, suspicious files, and changed core files early.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">10. Monitor Uptime and Activity</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Uptime alerts and an activity log show when the site goes down and who changed what.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Backups</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">11. Automatic Off-Site Backups</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Schedule backups of files and database with tools like UpdraftPlus or your host's backup system, stored off-site in cloud storage. Keep several restore points.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">12. Test Restores</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A backup you have never restored is a hope, not a plan. Test a restore on a staging site.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Hosting and Configuration</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">13. Quality Hosting, SSL, and Current PHP</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Choose hosting with server-level security, use SSL everywhere, and run a supported PHP version.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">14. Harden WordPress</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Disable file editing from the dashboard.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Set correct file permissions.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Protect wp-config.php.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Restrict REST API endpoints that list users.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Hide detailed error messages on the live site.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Forms and Spam</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">15. Protect Forms From Spam</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Use honeypot fields, invisible challenges like Cloudflare Turnstile or reCAPTCHA, and spam filters on contact forms, comments, and registrations. More in <a href="/dynamic-forms-wordpress/">dynamic forms in WordPress</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">If Your Site Is Hacked</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li>Put the site in maintenance mode if customers are affected.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Change all passwords: WordPress, hosting, database, and FTP.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Scan and remove malware, or restore a clean backup.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Update everything and remove the vulnerable plugin.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Request a review in Google Search Console if warnings appear.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Frequently Asked Questions</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Is WordPress secure?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Yes, when maintained. Most breaches come from outdated plugins and weak passwords, not WordPress core.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Do I need a security plugin?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Most sites benefit from one, or from equivalent protection at the host or CDN level.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Can you clean a hacked site?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Yes. I remove malware, close the entry point, and harden the site to prevent it happening again.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Want Your Site Secured?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>I handle security hardening, malware removal, and ongoing monitoring. <a href="/contact/">Contact me here</a>. For ongoing care, see <a href="/wordpress-maintenance-cost/">WordPress website maintenance cost</a>.</p>
+<!-- /wp:paragraph -->

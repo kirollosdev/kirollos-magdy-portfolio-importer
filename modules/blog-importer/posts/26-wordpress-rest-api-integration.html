@@ -1,0 +1,185 @@
+<!-- wp:paragraph -->
+<p>WordPress REST API integration connects your website to the other systems your business runs on. Instead of copying orders into your accounting tool, updating stock by hand, or pasting leads into a CRM, the website and your systems exchange data automatically.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I have built integrations that sync WooCommerce stock and orders with businesses' internal systems, connect delivery companies' websites to their operations, and link sites to external APIs of all kinds.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What the WordPress REST API Is</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The REST API lets other software read and write WordPress data over HTTPS: posts, pages, users, products, orders, and custom data. WooCommerce has its own REST API for products, orders, customers, and coupons. WordPress can also call external APIs from custom plugins. Together, that means data can flow both ways.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Common Integrations</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Stock and Orders With an ERP or POS</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Stock levels update on the website when they change in the warehouse or shop.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>New online orders go straight into the ERP or accounting system.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Order status and tracking numbers flow back to the customer.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>This prevents overselling and removes double data entry.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">CRM and Marketing</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Form leads and customers sent to a CRM with source and campaign data.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Customer segments synced to email marketing tools.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Purchase events tracked for remarketing.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Delivery, Shipping, and Logistics</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Shipping rates calculated live from carrier APIs.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Shipments created automatically after payment.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Tracking updates shown in the customer's account.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Booking and Reservations</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Availability pulled from a booking or property management system.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Reservations pushed back so everything stays in sync.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Payments</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Payment gateways connected through their APIs, including custom gateways for providers without a WooCommerce plugin.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Headless and Mobile Apps</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Mobile apps or JavaScript front ends using WordPress as the content back end.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How I Build Integrations</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Understand the data first</strong>: what moves, in which direction, how often, and which system is the source of truth.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Secure authentication</strong>: application passwords, API keys, or OAuth, stored safely, never in the front end.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Webhooks where possible</strong> for real-time updates, with scheduled sync as a backup.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Error handling and logs</strong> so failed syncs are visible and retried, not silently lost.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Rate limits and batching</strong> so large catalogs sync without overloading either system.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>A custom plugin</strong> to hold the integration, so it survives theme changes and updates.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Security Considerations</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>An integration opens a door into your site, so it must be locked properly: minimum permissions for API users, HTTPS only, validated input, and restricted endpoints. I also disable or restrict REST API endpoints that expose information you do not want public, such as user lists.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Frequently Asked Questions</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Can my website sync with a system that has no plugin?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>If the system has an API, yes, through a custom integration plugin.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Does the sync happen in real time?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>It can, with webhooks. Some systems only allow scheduled syncs, for example every few minutes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">What happens if the other system is down?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A good integration logs the failure and retries later, so no orders or updates are lost.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Connect Your Website to Your Systems</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tell me which systems you use and what should sync. <a href="/contact/">Contact me here</a>. Need functionality beyond integrations? Read about <a href="/custom-wordpress-plugin-development/">custom WordPress plugin development</a>.</p>
+<!-- /wp:paragraph -->

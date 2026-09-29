@@ -1,0 +1,199 @@
+<!-- wp:paragraph -->
+<p>A Shopify to WooCommerce migration is not just copying products. Done carelessly, it breaks your Google rankings, loses customer accounts, and confuses returning buyers. Done carefully, customers barely notice anything except a store that finally does what you need.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This is the checklist I follow.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Why Stores Move From Shopify to WooCommerce</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Common reasons I hear:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Monthly app costs keep growing.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Transaction fees when using a payment gateway other than Shopify Payments.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Features that need deep customization, like B2B pricing or custom checkout rules.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Wanting full ownership of the store and data.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Better content and SEO control on WordPress.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>If you are still deciding, read <a href="/woocommerce-vs-shopify/">WooCommerce vs Shopify</a> first.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 1: Audit What You Have</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Before moving anything, list:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Number of products, variants, and collections.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Apps you use and what each one does.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Customer accounts and order history you need to keep.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Your current URLs, especially top traffic pages from Google Search Console.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Payment and shipping settings.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Every Shopify app needs a WooCommerce equivalent or custom code. This is where hidden work shows up.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 2: Set Up WooCommerce on a Staging Site</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Never build on your live domain. I set up WordPress and WooCommerce on a staging site with good hosting, a lightweight theme, and the essential plugins only.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 3: Migrate the Data</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Products</strong>: titles, descriptions, prices, SKUs, stock, images, variants, and categories. Shopify's CSV export can be mapped to WooCommerce's importer, or a migration tool can be used for larger stores.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Customers</strong>: names, emails, and addresses. Passwords cannot be moved, so customers will reset their password on first login. Plan an email to tell them.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Orders</strong>: historical orders for records and customer accounts.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Reviews</strong>: exported and imported so social proof is not lost.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>After import, I check a sample of products manually. Variants and images are where problems usually appear.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 4: Rebuild the Design</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This is a chance to improve, not just copy. I rebuild the store with Elementor Pro or a custom theme, keeping what converts well and fixing what does not. Product pages, cart, and checkout get the most attention.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 5: Map URLs and Set 301 Redirects</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This step protects your rankings. Shopify uses paths like /products/ and /collections/, and WooCommerce uses different ones by default. Every old URL needs a 301 redirect to its new equivalent. I export all old URLs, map them one by one, and test them before launch.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 6: Recreate SEO Settings</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Page titles and meta descriptions, set in Yoast SEO.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Image alt text.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Product schema.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>XML sitemap submitted to Google Search Console.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 7: Configure Payments, Shipping, and Taxes</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Set up gateways like Stripe, PayPal, or regional providers, shipping zones and rates, and tax rules. Then test real orders with every payment method.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 8: Test Everything, Then Launch</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Test on mobile and desktop: search, filters, add to cart, coupons, checkout, emails, and account pages. Then switch the domain, check redirects again, and monitor Search Console and sales for the first weeks.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Frequently Asked Questions</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Will I lose my Google rankings?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Some movement is normal right after a migration. With complete 301 redirects and preserved content, rankings usually settle. Missing redirects are what cause lasting losses.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">How long does a migration take?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A small store with a few hundred products can take two to four weeks including design. Larger catalogs or complex apps take longer.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Can my customers keep their accounts?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Their accounts and order history can be migrated. They will need to set a new password.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Plan Your Migration</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>I handle Shopify to WooCommerce migrations from audit to launch. <a href="/contact/">Send me your store link</a> and I will reply with a migration plan and quote.</p>
+<!-- /wp:paragraph -->

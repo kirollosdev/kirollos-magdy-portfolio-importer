@@ -1,0 +1,13 @@
+# Normalise line endings in the repository
+* text=auto
+
+*.png binary
+*.jpg binary
+*.ttf binary
+*.woff2 binary
+
+# Keep repository-only files out of "git archive" release zips
+/.github export-ignore
+/.gitignore export-ignore
+/.gitattributes export-ignore
+/README.md export-ignore

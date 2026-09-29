@@ -1,0 +1,165 @@
+<!-- wp:paragraph -->
+<p>WP Rocket vs LiteSpeed Cache is one of the most common WordPress speed questions, and the answer mostly depends on one thing: what web server your hosting runs. I use both on client sites, and each one wins in the right environment.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Short Answer</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>If your host runs <strong>LiteSpeed</strong> web server (for example Hostinger and other LiteSpeed-based hosts), use <strong>LiteSpeed Cache</strong>. It is free and caches at the server level.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>If your host runs <strong>Apache or Nginx</strong>, <strong>WP Rocket</strong> is usually the simpler and more reliable choice.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Do not run both caching systems at the same time.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How LiteSpeed Cache Works</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>LiteSpeed Cache is a free plugin built by the company behind LiteSpeed web server. Its page cache works at the server level, which is very efficient. That is also its main requirement: full page caching needs a LiteSpeed server, or the QUIC.cloud CDN in front of other servers.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>It also includes a large set of optimization features: CSS and JavaScript minification and combination, lazy loading, database cleanup, and image optimization through QUIC.cloud.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Strengths</strong>: free, extremely fast on LiteSpeed hosting, many features in one plugin.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Weaknesses</strong>: many settings, and the wrong combination can break layouts or scripts, so it needs careful configuration and testing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How WP Rocket Works</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>WP Rocket is a premium plugin with no free version. It creates cached HTML pages that work on any server, and it enables sensible performance features as soon as you activate it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Its most valuable features include removing unused CSS, delaying JavaScript until user interaction, lazy loading, and preloading the cache.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Strengths</strong>: works on any hosting, easy setup, reliable defaults, strong support.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Weaknesses</strong>: yearly license cost, and on LiteSpeed servers it does not use the server-level cache.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Features Side by Side</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Price</strong>: LiteSpeed Cache is free; WP Rocket is a paid yearly license.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Server requirement</strong>: LiteSpeed Cache page caching needs LiteSpeed or QUIC.cloud; WP Rocket works everywhere.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Ease of setup</strong>: WP Rocket is simpler; LiteSpeed Cache offers more control.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Unused CSS removal</strong>: both offer it.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Delay JavaScript</strong>: both offer it.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Image optimization</strong>: LiteSpeed Cache includes it through QUIC.cloud; WP Rocket pairs with a separate image plugin.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Settings That Make the Biggest Difference</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Whichever plugin you choose, these are the settings I test first:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Page cache on</strong>, with correct exclusions for cart, checkout, and account pages on WooCommerce stores.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Remove unused CSS</strong>, then check every template for missing styles.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Delay JavaScript</strong>, excluding scripts that must run immediately like sliders above the fold, consent banners, or payment scripts.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Lazy load images</strong> except the main image at the top of the page, which should load immediately for a better LCP.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Preload the cache</strong> so visitors rarely hit an uncached page.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Caching Is Not a Replacement for a Good Build</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A caching plugin makes a well-built site faster. It cannot fix a heavy theme, oversized images, or twenty unnecessary plugins. I cover the full approach in <a href="/how-to-build-a-fast-wordpress-website-from-the-ground-up/">how to build a fast WordPress website from the ground up</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Frequently Asked Questions</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Can I use WP Rocket on a LiteSpeed server?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>You can, but you lose the server-level cache that makes LiteSpeed fast. On LiteSpeed hosting, LiteSpeed Cache is usually the better choice.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Which is better for WooCommerce?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Both support WooCommerce and exclude cart and checkout pages. The server decides, as above.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Will a caching plugin improve my PageSpeed score?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Usually, yes, especially on mobile, but results depend on your theme, images, hosting, and third-party scripts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Want a Faster WordPress Site?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>I do WordPress speed optimization with WP Rocket and LiteSpeed Cache, including Core Web Vitals fixes. <a href="/contact/">Send me your site link</a> for a speed review.</p>
+<!-- /wp:paragraph -->

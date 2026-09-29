@@ -1,0 +1,181 @@
+<!-- wp:paragraph -->
+<p>A WordPress speed optimization service should do more than install a caching plugin and send you a screenshot of a higher score. Real speed work finds why the site is slow and fixes the cause, so pages load fast for real visitors on real phones, and Google's Core Web Vitals pass.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Here is what a proper speed audit covers and what it fixes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Why Speed Matters</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Visitors leave slow sites, especially on mobile.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Core Web Vitals are part of how Google evaluates page experience.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Faster checkout and product pages help stores convert.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 1: Measure Before Changing Anything</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>I start with PageSpeed Insights, Core Web Vitals data from real users where available, and waterfall tests that show every file the page loads. The three metrics that matter most:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>LCP (Largest Contentful Paint)</strong>: how fast the main content appears.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>INP (Interaction to Next Paint)</strong>: how quickly the page responds to taps and clicks.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>CLS (Cumulative Layout Shift)</strong>: whether the layout jumps while loading.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 2: Fix the Biggest Problems First</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Images</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Oversized images are the most common problem. I resize, compress, and convert to modern formats, lazy load images below the fold, and make sure the main hero image loads first.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">CSS and JavaScript</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Remove unused CSS.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Delay non-critical JavaScript until interaction.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Stop plugin scripts from loading on pages that do not use them.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Replace heavy sliders and effects with lighter code.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Fonts</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Load only the font weights in use, host fonts locally, and preload the main font.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Caching</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Configure page caching with WP Rocket, LiteSpeed Cache, or the host's caching layer, with correct exclusions for cart, checkout, and account pages. More in <a href="/wp-rocket-vs-litespeed-cache/">WP Rocket vs LiteSpeed Cache</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Third-Party Scripts</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Chat widgets, tracking pixels, and embedded maps or videos often cost more than the site itself. I load them later, replace embeds with lightweight previews, and remove what is not used.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Database and Server</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Clean old revisions and expired data, add object caching where the host supports it, update PHP, and tune server settings. Sometimes the honest answer is better hosting.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 3: Speed for WooCommerce Stores</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Stores have dynamic pages that cannot be fully cached: cart, checkout, and account. I optimize these separately by reducing cart fragments requests, cleaning heavy product queries, and making sure product and category pages are cached and lean.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 4: Speed for Elementor Sites</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Elementor sites get faster with containers instead of nested sections, fewer add-on plugins, and Elementor's own performance features enabled.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 5: Test Everything Again</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>After optimization, I test every template, form, and checkout step, on mobile and desktop, to make sure speed work did not break anything.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Realistic Expectations</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Scores depend on device, network, and third-party scripts, so no honest developer guarantees a fixed number. What I aim for is passing Core Web Vitals and pages that feel instant. On my own projects, well-built pages regularly reach high PageSpeed scores on desktop and strong scores on mobile.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Frequently Asked Questions</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">How long does speed optimization take?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Most sites take one to three days, depending on size and how much needs rebuilding.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Will my design change?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>No. Speed work changes how the site loads, not how it looks.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Is a caching plugin enough?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>It helps, but it cannot fix oversized images, heavy themes, or too many scripts. The build matters. See <a href="/how-to-build-a-fast-wordpress-website-from-the-ground-up/">how to build a fast WordPress website from the ground up</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Get a Speed Review</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Send me your site link and I will tell you what is slowing it down. <a href="/contact/">Contact me here</a>.</p>
+<!-- /wp:paragraph -->
