@@ -10,14 +10,14 @@ A WordPress admin plugin that fills my portfolio site, **[kirollosmagdy.com](htt
 
 ## What it does
 
-### Portfolio Import (Tools > Portfolio Import)
+### Portfolio Import (Kirollos Magdy > Portfolio Import)
 - Creates 14 projects in the `portfolios` post type with title, excerpt and a body built from challenge, solution and result copy.
 - Assigns Categories, Services and Industries from a short curated vocabulary, so the site's filters group projects instead of listing one term each.
 - Imports screenshots from a zip with one folder per project, in batches with a live progress bar to avoid server timeouts. A file named `logo` becomes the featured image and card logo; the rest fill the gallery in number order.
 - Saves completion dates for every project on one screen.
 - Safe to re-run: projects are matched by live URL, then title, and only empty fields are filled, so hand edits survive.
 
-### Blog Importer (Tools > Blog Importer)
+### Blog Importer (Kirollos Magdy > Blog Importer)
 - Publishes 29 SEO articles as native Gutenberg blocks, with category, tags, excerpt, Yoast SEO title, meta description and focus keyphrase.
 - Sets a branded 1200x630 cover as the featured image, with alt text. A featured image set by hand is never replaced.
 - Publish now or import as drafts. Re-importing updates posts instead of duplicating them, and published posts stay published.

@@ -57,8 +57,12 @@ class KMPFI_Admin_Page {
 		wp_send_json_success( KMPFI_Gallery_Zip::step( $batch ) );
 	}
 
+	/**
+	 * Under the "Kirollos Magdy" menu when Portfolio Builder is active, under Tools otherwise.
+	 */
 	public function menu() {
-		add_management_page(
+		add_submenu_page(
+			defined( 'KMPB_ADMIN_MENU' ) ? KMPB_ADMIN_MENU : 'tools.php',
 			__( 'Portfolio Import', 'kirollos-magdy-portfolio-importer' ),
 			__( 'Portfolio Import', 'kirollos-magdy-portfolio-importer' ),
 			'manage_options',

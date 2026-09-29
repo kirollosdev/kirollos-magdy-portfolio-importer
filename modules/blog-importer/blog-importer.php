@@ -3,7 +3,7 @@
  * Blog Importer module (formerly the standalone "Kirollos Blog Importer" plugin, v1.1.0).
  *
  * Imports the bundled, SEO-ready blog posts with categories, tags, excerpt, Yoast SEO title,
- * meta description, focus keyphrase and a branded cover image. Tools > Blog Importer.
+ * meta description, focus keyphrase and a branded cover image. Kirollos Magdy > Blog Importer.
  * Loaded by the main plugin file, which calls KMBI_Admin::init().
  *
  * Posts are written as Markdown in source/, then built into posts/ with:

@@ -1,6 +1,6 @@
 <?php
 /**
- * Tools > Blog Importer admin screen.
+ * Blog Importer admin screen (Kirollos Magdy > Blog Importer, or Tools without Portfolio Builder).
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -17,12 +17,20 @@ class KMBI_Admin {
 		add_filter( 'plugin_action_links_' . plugin_basename( KMPFI_FILE ), array( __CLASS__, 'action_link' ) );
 	}
 
+	/**
+	 * Under the "Kirollos Magdy" menu when Portfolio Builder is active, under Tools otherwise.
+	 */
 	public static function menu() {
-		add_management_page( 'Blog Importer', 'Blog Importer', 'publish_posts', self::SLUG, array( __CLASS__, 'render' ) );
+		add_submenu_page( defined( 'KMPB_ADMIN_MENU' ) ? KMPB_ADMIN_MENU : 'tools.php', 'Blog Importer', 'Blog Importer', 'publish_posts', self::SLUG, array( __CLASS__, 'render' ) );
+	}
+
+	/** Screen URL; admin-post.php builds no menu, so it cannot be looked up there. */
+	public static function url() {
+		return admin_url( ( defined( 'KMPB_ADMIN_MENU' ) ? 'admin.php' : 'tools.php' ) . '?page=' . self::SLUG );
 	}
 
 	public static function action_link( $links ) {
-		array_unshift( $links, '<a href="' . esc_url( admin_url( 'tools.php?page=' . self::SLUG ) ) . '">Import blog posts</a>' );
+		array_unshift( $links, '<a href="' . esc_url( self::url() ) . '">Import blog posts</a>' );
 		return $links;
 	}
 
@@ -55,7 +63,7 @@ class KMBI_Admin {
 		}
 
 		set_transient( 'kmbi_notice_' . get_current_user_id(), array( 'done' => $done, 'errors' => $errors, 'status' => $status ), 60 );
-		wp_safe_redirect( admin_url( 'tools.php?page=' . self::SLUG ) );
+		wp_safe_redirect( self::url() );
 		exit;
 	}
 

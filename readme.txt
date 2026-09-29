@@ -3,7 +3,7 @@ Contributors: Kirollos Magdy
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.8.0
+Stable tag: 1.9.0
 License: Proprietary. All rights reserved.
 
 Creates every Kirollos Magdy portfolio project and blog post in one click.
@@ -29,7 +29,7 @@ named quotes, and there is no record of genuine ones for these builds.
 == Usage ==
 
 1. Activate Kirollos Magdy Portfolio Builder first, so the post type exists.
-2. Tools > Portfolio Import.
+2. Kirollos Magdy > Portfolio Import (Tools > Portfolio Import if Portfolio Builder is not active).
 3. Press "Import everything now".
 4. Deactivate and delete this plugin once you are happy with the result.
 
@@ -38,7 +38,7 @@ then their title, and only empty fields are filled, so hand edits survive.
 
 == Blog Importer ==
 
-Tools > Blog Importer publishes the bundled SEO blog posts (29 in this release).
+Kirollos Magdy > Blog Importer publishes the bundled SEO blog posts (29 in this release).
 
 * Posts are created as native Gutenberg blocks, with their category, tags and excerpt.
 * Yoast SEO title, meta description and focus keyphrase are filled in.
@@ -102,3 +102,7 @@ title and meta description lengths, keyphrase placement and internal links.
   to match, so posts are not labelled "Updated" today. Re-importing applies the new dates to
   posts that already exist; all posts are pre-selected for that.
 * Blog Importer: each post's date is shown on the import screen.
+
+= 1.9.0 =
+* Portfolio Import and Blog Importer now live in the "Kirollos Magdy" admin menu from
+  Portfolio Builder. Without Portfolio Builder active they stay under Tools.
