@@ -115,7 +115,7 @@ class KMBI_Admin {
 									<img src="<?php echo esc_url( plugins_url( 'posts/' . $item['cover'], KMBI_PATH . 'blog-importer.php' ) ); ?>" alt="" width="120" style="border-radius:4px;display:block">
 								<?php endif; ?>
 							</td>
-							<td><strong><?php echo esc_html( $item['title'] ); ?></strong><br><code>/<?php echo esc_html( $item['slug'] ); ?>/</code></td>
+							<td><strong><?php echo esc_html( $item['title'] ); ?></strong><br><code>/<?php echo esc_html( $item['slug'] ); ?>/</code><?php if ( ! empty( $item['date'] ) ) : ?><br><small><?php echo esc_html( mysql2date( get_option( 'date_format' ), $item['date'] ) ); ?></small><?php endif; ?></td>
 							<td><?php echo esc_html( $item['focus_keyword'] ); ?></td>
 							<td><?php echo esc_html( $item['category'] ); ?></td>
 							<td>

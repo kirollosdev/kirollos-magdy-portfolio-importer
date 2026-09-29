@@ -3,7 +3,7 @@
  * Plugin Name:       Kirollos Magdy Portfolio Importer
  * Plugin URI:        https://wa.me/+201016324429
  * Description:       One-click content for kirollosmagdy.com. Tools > Portfolio Import creates every portfolio project against the portfolios post type and its Category, Service and Industry taxonomies. Tools > Blog Importer publishes the bundled SEO blog posts with covers and Yoast SEO fields. A helper for Kirollos Magdy Portfolio Builder.
- * Version:           1.7.0
+ * Version:           1.8.0
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            Kirollos Magdy - WordPress Developer
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // No direct access.
 }
 
-define( 'KMPFI_VERSION', '1.7.0' );
+define( 'KMPFI_VERSION', '1.8.0' );
 define( 'KMPFI_FILE', __FILE__ );
 define( 'KMPFI_PATH', plugin_dir_path( __FILE__ ) );
 

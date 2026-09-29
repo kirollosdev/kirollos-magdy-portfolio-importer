@@ -80,6 +80,36 @@ function toBlocks(md) {
 const files = fs.readdirSync(SRC).filter((f) => f.endsWith('.md')).sort();
 const posts = files.map((f) => ({ file: f, ...parse(path.join(SRC, f)) }));
 const slugs = new Set(posts.map((p) => `/${p.meta.slug}/`));
+// Publish dates: one distinct weekday per post, spread at random across DATE_FROM..DATE_TO,
+// at a working-hours time. The generator is seeded, so rebuilding keeps the same dates.
+// A `date: YYYY-MM-DD HH:MM` line in a post's front matter overrides its date.
+const DATE_FROM = '2025-10-01';
+const DATE_TO = '2026-09-25';
+const DATE_SEED = 20260930;
+function mulberry32(a) {
+  return function () {
+    a |= 0; a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+const pad = (n) => String(n).padStart(2, '0');
+function publishDates(count) {
+  const rnd = mulberry32(DATE_SEED);
+  const days = [];
+  for (let d = new Date(DATE_FROM + 'T00:00:00Z'); d <= new Date(DATE_TO + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + 1)) {
+    const wd = d.getUTCDay();
+    if (wd !== 0 && wd !== 6) days.push(d.toISOString().slice(0, 10));
+  }
+  for (let i = days.length - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1));
+    [days[i], days[j]] = [days[j], days[i]];
+  }
+  return days.slice(0, count).map((day) => `${day} ${pad(9 + Math.floor(rnd() * 9))}:${pad(Math.floor(rnd() * 60))}:00`);
+}
+const DATES = publishDates(posts.length);
+
 const errors = [];
 const warnings = [];
 const seenKw = new Map();
@@ -127,6 +157,7 @@ const manifest = posts.map((p, idx) => {
     focus_keyword: meta.focus_keyword,
     seo_title: meta.seo_title,
     meta_description: meta.meta_description,
+    date: meta.date ? (meta.date.length === 16 ? meta.date + ':00' : meta.date) : DATES[idx],
   };
 });
 

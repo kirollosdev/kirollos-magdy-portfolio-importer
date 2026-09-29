@@ -83,12 +83,36 @@ class KMBI_Importer {
 			'tags_input'    => $item['tags'],
 		);
 
+		// Publish date from the manifest (site local time). The last-modified date is set to
+		// match, so the article template does not label every post "Updated" today.
+		$date          = isset( $item['date'] ) ? (string) $item['date'] : '';
+		$keep_modified = null;
+		if ( preg_match( '/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/', $date ) ) {
+			$postarr['post_date']     = $date;
+			$postarr['post_date_gmt'] = get_gmt_from_date( $date );
+			$postarr['edit_date']     = true;
+
+			$slug          = $item['slug'];
+			$keep_modified = static function ( $data ) use ( $slug, $date ) {
+				if ( 'post' === $data['post_type'] && $slug === $data['post_name'] ) {
+					$data['post_modified']     = $date;
+					$data['post_modified_gmt'] = get_gmt_from_date( $date );
+				}
+				return $data;
+			};
+			add_filter( 'wp_insert_post_data', $keep_modified, 99 );
+		}
+
 		if ( $existing ) {
 			$postarr['ID'] = $existing->ID;
 			$post_id       = wp_update_post( wp_slash( $postarr ), true );
 		} else {
 			$postarr['post_author'] = get_current_user_id();
 			$post_id                = wp_insert_post( wp_slash( $postarr ), true );
+		}
+
+		if ( $keep_modified ) {
+			remove_filter( 'wp_insert_post_data', $keep_modified, 99 );
 		}
 
 		if ( is_wp_error( $post_id ) ) {

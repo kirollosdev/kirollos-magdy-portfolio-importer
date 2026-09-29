@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Version of the bundled posts, not of the plugin. Each imported post stores it, and posts
  * imported from an older bundle are pre-selected for re-import. Bump it only when posts/ changes.
  */
-define( 'KMBI_VERSION', '1.1.0' );
+define( 'KMBI_VERSION', '1.2.0' );
 define( 'KMBI_PATH', plugin_dir_path( __FILE__ ) );
 
 require_once KMBI_PATH . 'includes/class-kmbi-importer.php';

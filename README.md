@@ -35,7 +35,7 @@ node build-posts.js
 python make-covers.py path/to/fonts
 ```
 
-- **`build-posts.js`** converts Markdown to Gutenberg block markup and writes `posts/manifest.json`. It fails the build when an SEO title is over 60 characters, a meta description falls outside 120 to 156 characters, the focus keyphrase is missing from the first paragraph, two posts target the same keyphrase, or an internal link points at a page that does not exist.
+- **`build-posts.js`** converts Markdown to Gutenberg block markup, gives every post its own publish date (seeded, so rebuilds are stable) and writes `posts/manifest.json`. It fails the build when an SEO title is over 60 characters, a meta description falls outside 120 to 156 characters, the focus keyphrase is missing from the first paragraph, two posts target the same keyphrase, or an internal link points at a page that does not exist.
 - **`make-covers.py`** renders a cover for every post with Pillow, in the site's brand colours and fonts.
 
 ## Engineering notes

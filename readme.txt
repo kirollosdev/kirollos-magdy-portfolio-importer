@@ -3,7 +3,7 @@ Contributors: Kirollos Magdy
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.7.0
+Stable tag: 1.8.0
 License: Proprietary. All rights reserved.
 
 Creates every Kirollos Magdy portfolio project and blog post in one click.
@@ -95,3 +95,10 @@ title and meta description lengths, keyphrase placement and internal links.
 * Merged the Kirollos Blog Importer plugin (1.1.0) in as Tools > Blog Importer. If
   the separate plugin is still active, this copy steps aside and shows a notice;
   deactivate and delete the separate one.
+
+= 1.8.0 =
+* Blog Importer: every post now has its own publish date, a different weekday for each,
+  spread at random between October 2025 and September 2026. The last-modified date is set
+  to match, so posts are not labelled "Updated" today. Re-importing applies the new dates to
+  posts that already exist; all posts are pre-selected for that.
+* Blog Importer: each post's date is shown on the import screen.
